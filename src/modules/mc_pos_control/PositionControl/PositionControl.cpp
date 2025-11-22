@@ -273,7 +273,8 @@ void PositionControl::getAttitudeSetpoint(vehicle_attitude_setpoint_s &attitude_
 	manual_control_setpoint_s manual_control_setpoint;
 	_manual_control_setpoint_sub.copy(&manual_control_setpoint);
 
-	if (manual_control_setpoint.aux2 > 0.3f) {
+	// if (manual_control_setpoint.aux2 > 0.3f) {
+	if (0) {
 		// Tilt mode
 		ControlMath::thrustToAttitude(_thr_sp, _yaw_sp, attitude_setpoint);
 		_roll_angle = 0.f;
